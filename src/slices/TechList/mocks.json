@@ -1,0 +1,76 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "vertical",
+				"type": "Text"
+			},
+			"tech_name": {
+				"__TYPE__": "FieldContent",
+				"value": "ought",
+				"type": "Text"
+			},
+			"tech_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#7c210c",
+				"type": "Color"
+			},
+			"tech_stack": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"tech_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sang",
+									"type": "Text"
+								}
+							],
+							[
+								"tech_color",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "under",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"tech_stack2": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"tech_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "problem",
+									"type": "Text"
+								}
+							],
+							[
+								"tech_color",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "#173473",
+									"type": "Color"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
