@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"liveproject": {
+				"__TYPE__": "FieldContent",
+				"value": "column",
+				"type": "Text"
+			},
+			"liveprojectlink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"githubrepo": {
+				"__TYPE__": "FieldContent",
+				"value": "manufacturing",
+				"type": "Text"
+			},
+			"githubrepolink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			}
+		},
+		"items": []
+	}
+]

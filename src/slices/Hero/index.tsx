@@ -80,15 +80,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     // end of split letters into spans function.
   };
   return (
-    <Bounded
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-      ref={component}
-    >
+    <Bounded ref={component}>
       <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
         {/* objects */}
-
-        <Shapes />
 
         {/* end of objects */}
         <div className="col-start-1 md:row-start-1">
@@ -125,6 +119,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             &lt;/html&gt;
           </span>
         </div>
+        <Shapes />
       </div>
     </Bounded>
   );

@@ -1,0 +1,49 @@
+{
+  "id": "project_info",
+  "type": "SharedSlice",
+  "name": "ProjectInfo",
+  "description": "ProjectInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "liveproject": {
+          "type": "Text",
+          "config": {
+            "label": "LiveProject",
+            "placeholder": ""
+          }
+        },
+        "liveprojectlink": {
+          "type": "Link",
+          "config": {
+            "label": "LiveProjectLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "githubrepo": {
+          "type": "Text",
+          "config": {
+            "label": "GitHubRepo",
+            "placeholder": ""
+          }
+        },
+        "githubrepolink": {
+          "type": "Link",
+          "config": {
+            "label": "GitHubRepoLink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

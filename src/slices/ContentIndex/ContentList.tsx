@@ -7,14 +7,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
 import { Content } from "@prismicio/client";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 type ContentListProps = {
   items: Content.BlogPostDocument[] | Content.ProjectDocument[];
-  contentType: Content.BlogPostIndexSlice["primary"]["content_type"];
-  fallbackItemImage: Content.BlogPostIndexSlice["primary"]["fallback_item_image"];
-  viewMoreText: Content.BlogPostIndexSlice["primary"]["view_more_text"];
+  contentType: Content.ContentIndexSlice["primary"]["content_type"];
+  fallbackItemImage: Content.ContentIndexSlice["primary"]["fallback_item_image"];
+  viewMoreText: Content.ContentIndexSlice["primary"]["view_more_text"];
 };
 
 export default function ContentList({
@@ -31,10 +32,10 @@ export default function ContentList({
   const [hovering, setHovering] = useState(false);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blogs" ? "/blog" : "/project";
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
 
   useEffect(() => {
-    // Animate list-items in with a stagger
+    // Animate list-items in with a stagger while loading or scrolling up.
     let ctx = gsap.context(() => {
       itemsRef.current.forEach((item, index) => {
         gsap.fromTo(
@@ -48,7 +49,7 @@ export default function ContentList({
             y: 0,
             duration: 1.3,
             ease: "elastic.out(1,0.3)",
-            stagger: 0.2,
+            // stagger: 0.2,
             scrollTrigger: {
               trigger: item,
               start: "top bottom-=100px",
@@ -113,8 +114,8 @@ export default function ContentList({
   };
 
   const contentImages = items.map((item) => {
-    const image = isFilled.image(item.data.image)
-      ? item.data.image
+    const image = isFilled.image(item.data.hover_image)
+      ? item.data.hover_image
       : fallbackItemImage;
     return asImageSrc(image, {
       fit: "crop",
@@ -147,14 +148,14 @@ export default function ContentList({
             onMouseEnter={() => onMouseEnter(index)}
             className="list-item opacity-0"
           >
-            <a
+            <Link
               href={`${urlPrefix}/${post.uid}`}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
               aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
                 <span className="text-3xl font-bold">{post.data.title}</span>
-                <div className="flex gap-3 text-yellow-400">
+                <div className="flex gap-3 text-yellow-400 text-lg font-bold">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="text-lg font-bold">
                       {tag}
@@ -165,7 +166,7 @@ export default function ContentList({
               <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
                 {viewMoreText} <MdArrowOutward />
               </span>
-            </a>
+            </Link>
           </li>
         ))}
 

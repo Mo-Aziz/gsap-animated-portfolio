@@ -25,7 +25,7 @@ export default function Shapes() {
             far={9}
           />
 
-          <Environment preset="sunset" />
+          <Environment preset="studio" />
         </Suspense>
       </Canvas>
       {/* </a> */}
@@ -68,6 +68,12 @@ function Geometries() {
     new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({
+      roughness: 0,
+      metalness: 0.5,
+      color: 0x2980b9,
+    }),
+    new THREE.MeshStandardMaterial({ color: 0x2c3e50, roughness: 0.5 }),
   ];
   //pass to Geometry component
 

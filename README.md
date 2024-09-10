@@ -6,6 +6,8 @@
 
 #### G.sap
 
+#### clsx
+
 react three fiber
 react-three drei
 @reverb-ui/react
