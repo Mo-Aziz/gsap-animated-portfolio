@@ -20,8 +20,8 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
       <Heading as="h2" size="lg">
         {slice.primary.heading}
       </Heading>
-      {slice.primary.details.map((item) => (
-        <div key={item} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
+      {slice.primary.details.map((item, index) => (
+        <div key={index} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
           <Heading as="h3" size="sm">
             {item.title}
           </Heading>
