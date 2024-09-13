@@ -8,6 +8,8 @@
 
 #### clsx
 
-react three fiber
-react-three drei
-@reverb-ui/react
+#### react three fiber
+
+#### react-three drei
+
+#### @reverb-ui/react
