@@ -33,14 +33,14 @@ const ProjectInfo = ({ slice }: ProjectInfoProps): JSX.Element => {
         </div>
         <div className="flex gap-4">
           <label htmlFor="" className="font-bold text-blue-600">
-            {slice.primary.githubrepo}
+            {slice.primary.githubrepo}:
           </label>
           <PrismicNextLink
             field={slice.primary.githubrepolink}
             className="underline-none translate-transform hover:text-yellow-400 hover:underline"
             target="_blank"
           >
-            Github Repository
+            <span className="hover:underline">Github Repository</span>
           </PrismicNextLink>
         </div>
       </div>
