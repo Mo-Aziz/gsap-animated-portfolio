@@ -64,7 +64,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         },
       );
     }, component);
-    return () => ctx.revert();
+    return () => ctx.revert(); // cleanup
   }, []);
   // split letters into spans
   const renderLetters = (name: KeyTextField, key: string) => {

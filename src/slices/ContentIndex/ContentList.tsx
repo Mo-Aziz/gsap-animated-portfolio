@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
 import { Content } from "@prismicio/client";
 import Link from "next/link";
+import Bounded from "@/components/Bounded";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,10 +136,10 @@ export default function ContentList({
   }, [contentImages]);
 
   return (
-    <>
+    <Bounded as="div" className="overflow-hidden sm:mx-1 md:mx-auto">
       <ul
         ref={component}
-        className="grid border-b border-b-slate-100"
+        className="grid overflow-hidden border-b border-b-slate-100"
         onMouseLeave={onMouseLeave}
       >
         {items.map((post, index) => (
@@ -182,6 +183,6 @@ export default function ContentList({
           ref={revealRef}
         ></div>
       </ul>
-    </>
+    </Bounded>
   );
 }

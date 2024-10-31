@@ -61,6 +61,7 @@ export default function NavBar({
                       : undefined
                   }
                 >
+                  {/* href="mailto:your-email@example.com" */}
                   <span
                     className={clsx(
                       "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
