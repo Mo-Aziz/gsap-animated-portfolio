@@ -158,9 +158,9 @@ export default function ContentList({
             >
               <div className="flex flex-col">
                 <span className="text-3xl font-bold">{post.data.title}</span>
-                <div className="flex gap-3 text-lg font-bold text-yellow-400">
+                <div className="flex justify-start gap-3 text-lg font-bold text-yellow-400">
                   {post.tags.map((tag, index) => (
-                    <span key={index} className="text-lg font-bold">
+                    <span key={index} className="text-nowrap text-lg font-bold">
                       {tag}
                     </span>
                   ))}
